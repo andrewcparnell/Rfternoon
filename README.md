@@ -1,9 +1,4 @@
----
-title: "Rfternoon: advanced R in a few hours"
-author: "Andrew Parnell"
-date: "May 2020"
-output: html_document
----
+## Rfternoon: advanced R in a few hours
 
 Module pre-requisites can be found [here](https://andrewcparnell.github.io/Rfternoon/Prerequisites.html). All the raw files and code can be found [here](https://www.github.com/andrewcparnell/Rfternoon) (click 'Download ZIP' near the top right if you want offline versions of everything).
 
