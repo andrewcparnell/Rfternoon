@@ -2,8 +2,9 @@
 
 # Run this line first
 # If you get an error about there being no package run
-# install.packages('ggplot2')
+# install.packages(c('ggplot2', 'plotly')
 library(ggplot2)
+library(plotly)
 
 # Now run this block of code
 
@@ -61,11 +62,12 @@ glob_temp$upper = with(glob_temp, J.D + 2 * J.D.sd)
 # What does ggplot do?
 # What is aes?
 # What is geom_line?
-p = ggplot(glob_temp, aes(x = Year, y = J.D, colour = J.D)) +
-  geom_line(size = 1) + # Add thicker line
+p = ggplot(glob_temp, aes(x = Year, y = J.D)) +
+  geom_line(size = 1) # Add thicker line
 print(p)  
   
 # Now successively add these in and see their effect
+# Run print(p) after each one
 p = p + theme_bw()
 p = p + scale_x_continuous(breaks = seq(1880, 2020, by = 10))
 p = p + ylab('Temperature\nanomaly in C')
@@ -75,6 +77,8 @@ p = p + theme(legend.position="none")
 p = p + geom_errorbar(aes(ymin = lower, ymax = upper))
 p = p + geom_smooth(se = FALSE, method = 'loess')
 
+# Now for something tuly amazing - create an interactive plot
+ggplotly(p)
 
 # What else can I do? -----------------------------------------------------
 

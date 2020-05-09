@@ -7,6 +7,8 @@ To get started make sure you have downloaded [R](https://www.r-project.org) and 
 Then, open up Rstudio and in the Console window type:
 `install.packages(c('ggplot2', 'plotly', 'mlr', 'randomForest', 'rstan', 'shiny', 'mlbench'))`
 
+(If you have problems installing `rstan`, visited the [getting started guide](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started))
+
 If all works well, you are now ready to start the course. Download all the files above by clicking Clone or download > Download Zip. Double click on the `Rfternoon.Rproj` file and you can now start coding!
 
 Sessions:
