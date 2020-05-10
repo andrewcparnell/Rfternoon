@@ -23,4 +23,8 @@ model {
   }
   alpha ~ normal(mu_alpha, sigma_alpha);
   beta ~ normal(mu_beta, sigma_beta);
+  sigma_alpha ~ cauchy(0, 1);
+  sigma_beta ~ cauchy(0, 0.1);
+  mu_alpha ~ normal(0, 10);
+  mu_beta ~ normal(0, 1);
 }

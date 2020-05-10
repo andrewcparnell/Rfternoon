@@ -4,7 +4,6 @@
 library(mlr)
 library(randomForest)
 library(mlbench) 
-library(ROCR)
 
 # Read in some data
 data('BostonHousing2')
@@ -76,9 +75,11 @@ class_rf = resample(class_learn,
 
 # Go and look at the mlr documentation at: https://mlr.mlr-org.com
 # Find the full list of learners at https://mlr3learners.mlr-org.com
+# mlr cheat sheet: https://cheatsheets.mlr-org.com/mlr.pdf
 # Learn about the newer mlr3: https://mlr3.mlr-org.com
 # Check out the mlr3 gallery https://mlr3gallery.mlr-org.com
+# mlr3 book: https://mlr3book.mlr-org.com
 
 # Exercise ----------------------------------------------------------------
 
-# Find another data set (perhaps look in mlbench) and start predicting using different models. Borrow the code above to predict something interesting and try out different learners. See if you can find out how to compare different types of learners. Perhaps you could even use the h2o package to fit some more complex deep learning models.s
+# Find another data set (perhaps look in mlbench) and start predicting using different models. Borrow the code above to predict something interesting and try out different learners. See if you can find out how to compare different types of learners. Perhaps you could even use the h2o package to fit some more complex deep learning models!

@@ -57,9 +57,7 @@ stan_run_lr_bayes = sampling(stan_model_lr,
 print(stan_run_lr_bayes)
 plot(stan_run_lr_bayes) # Not always helpful if parameters on very different scales
 
-
 # A more complicated model ------------------------------------------------
-
 # Hierarchical regression -------------------------------------------------
 
 # Earnings data - want to estimate log earnings from height based on age and ethnicity categories
@@ -102,3 +100,28 @@ ggplot(earnings, aes(x = height_cm, y = y)) +
   geom_abline(data = out, 
               aes(intercept = intercepts,
                   slope = slopes))
+
+# And finally plot the different slopes to see if they are different
+all_slopes = extract(earnings_run_lr_bayes, pars = 'beta')$beta
+slopes_df = data.frame(
+  eth = rep(1:4, each = nrow(all_slopes)),
+  slopes = as.vector(all_slopes)
+)
+ggplot(slopes_df, aes(x = slopes)) +
+  geom_histogram(bins = 30) +
+  xlab('Estimated slope') + 
+  theme_bw() + 
+  facet_wrap(~ as.factor(eth))
+
+
+
+# What else can I do? -----------------------------------------------------
+
+# The Stan user guide has 100s of examples: https://mc-stan.org/users/documentation/
+# Stan forums for help https://discourse.mc-stan.org
+# ... but SO is usually better: https://stackoverflow.com/questions/tagged/rstan
+# A useful book: https://www.elsevier.com/books/doing-bayesian-data-analysis/kruschke/978-0-12-405888-0
+
+# Exercise ----------------------------------------------------------------
+
+# Try and implement a new linear regression on the cars data above. This time predict the miles per gallon based on both weight (wt) and number of cylinders). If you get stuck have a look in the stan user guide for multiple linear regression. 
