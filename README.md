@@ -13,7 +13,7 @@ If all works well, you are now ready to start the course. Download all the files
 
 Sessions:
 
- 0. Introduction to Rstudio | [video]()
+ 0. Introduction to Rstudio | [stream](https://media.heanet.ie/page/176fc0453b0542b386110c2bceee0e3b) | [download](https://media.heanet.ie/download/176fc0453b0542b386110c2bceee0e3b) 
  1. Advanced visualisations with `ggplot2` | [code](https://andrewcparnell.github.io/Rfternoon/1_learn_ggplot2.R) | [video]()
  2. Machine learning with `mlr` | [code](https://andrewcparnell.github.io/Rfternoon/2_learn_mlr.R) | [video]()
  3. Bayesian modelling with `rstan` | [code](https://andrewcparnell.github.io/Rfternoon/3_learn_rstan.R) | [video]()
