@@ -9,7 +9,7 @@ Then, open up Rstudio and in the Console window type:
 
 (If you have problems installing `rstan`, visited the [getting started guide](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started). If you have other problems installing packages use the [issues page](https://github.com/andrewcparnell/Rfternoon/issues))
 
-If all works well, you are now ready to start the course. Download all the files above by clicking Clone or download > Download Zip. Double click on the `Rfternoon.Rproj` file and you can now start coding!
+If all works well, you are now ready to start the course. Download all the files above by clicking [here](https://github.com/andrewcparnell/Rfternoon/archive/master.zip). Unzip this file and then double click on the `Rfternoon.Rproj` file. You can now start coding!
 
 Sessions:
 
