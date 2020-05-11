@@ -2,7 +2,7 @@
 
 # Run this line first
 # If you get an error about there being no package run
-# install.packages(c('ggplot2', 'plotly')
+# install.packages(c('ggplot2', 'plotly'))
 library(ggplot2)
 library(plotly)
 

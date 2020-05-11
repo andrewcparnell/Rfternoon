@@ -287,7 +287,7 @@ explore(iris)
 
 # The shiny gallery: https://shiny.rstudio.com/gallery/
 # In particular look at the different widgets: https://shiny.rstudio.com/gallery/widget-gallery.html
-# Notet hat you can get the code of all these
+# Note that you can get the code of all these
 # Share your own shiny apps: https://www.shinyapps.io
 # Shiny cheat sheet https://shiny.rstudio.com/articles/cheatsheet.html
 # Mastering shiny book: https://mastering-shiny.org
