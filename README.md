@@ -1,4 +1,4 @@
-## Rfternoon: advanced R in a few hours
+# Rfternoon: advanced R in a few hours
 
 Welcome to a very short R course that aims to teach you some of the amazing, advanced things you can do in R, in just a few hours.
 
