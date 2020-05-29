@@ -1,6 +1,6 @@
-# Rfternoon: advanced R in a few hours
+# Rfternoon: advanced R for beginners in a few hours
 
-Welcome to a very short R course that aims to teach you some of the amazing, advanced things you can do in R, in just a few hours.
+Welcome to a very short R course that aims to teach you some of the amazing, advanced things you can do in R, in just a few hours, with no previous R or programming experience.
 
 To get started make sure you have downloaded [R](https://www.r-project.org) and [Rstudio](https://rstudio.com).
 
