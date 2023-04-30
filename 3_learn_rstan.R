@@ -79,7 +79,7 @@ earnings_data_lr = list(N = nrow(earnings),
 earnings_model_lr = stan_model('hier_reg.stan')
 earnings_run_lr_bayes = sampling(earnings_model_lr, 
                                  data = earnings_data_lr)
-plot(earnings_run_lr_bayes) # Now have a intercept and slope for each
+plot(earnings_run_lr_bayes) # Now have a intercept and slope for each ethnic group
 plot(earnings_run_lr_bayes, pars = 'beta') # Now have a intercept and slope for each
 print(earnings_run_lr_bayes)
 

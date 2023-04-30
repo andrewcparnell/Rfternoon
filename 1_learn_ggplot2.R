@@ -9,7 +9,7 @@ library(plotly)
 # Now run this block of code
 
 # Read in the data, remove first row, identify variable types, and missing values
-glob_temp = read.csv('https://data.giss.nasa.gov/gistemp/tabledata_v3/GLB.Ts+dSST.csv',
+glob_temp = read.csv('https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv',
                      skip = 1,
                      colClasses = 'numeric',
                      na.strings = '***')
@@ -22,9 +22,9 @@ glob_temp$upper = with(glob_temp, J.D + 2 * J.D.sd)
 
 # Missing one obs - full 2016 data
 ggplot(glob_temp, aes(x = Year, y = J.D, colour = J.D)) +
-  geom_line(size = 1) + # Add thicker line
+  geom_line(linewidth = 1) + # Add thicker line
   theme_bw() + # Nicer theme
-  scale_x_continuous(breaks = seq(1880, 2020, by = 10)) + # Better x-axis every 10 years
+  scale_x_continuous(breaks = seq(1880, 2025, by = 10)) + # Better x-axis every 10 years
   ylab('Temperature\nanomaly in C') + # Proper axis label with
   ggtitle('NASA global surface temperature data (mean +/- 2 standard deviations)') +
   theme(axis.title.y = element_text(angle = 0, vjust = 1, hjust = 0)) + # Put y-axis label correctly
@@ -38,7 +38,7 @@ ggplot(glob_temp, aes(x = Year, y = J.D, colour = J.D)) +
 # Back to the beginning ---------------------------------------------------
 
 # Detail of this command
-glob_temp = read.csv('https://data.giss.nasa.gov/gistemp/tabledata_v3/GLB.Ts+dSST.csv',
+glob_temp = read.csv('https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv',
                      skip = 1,
                      colClasses = 'numeric',
                      na.strings = '***')
@@ -63,13 +63,13 @@ glob_temp$upper = with(glob_temp, J.D + 2 * J.D.sd)
 # What is aes?
 # What is geom_line?
 p = ggplot(glob_temp, aes(x = Year, y = J.D)) +
-  geom_line(size = 1) # Add thicker line
+  geom_line(linewidth = 1) # Add thicker line
 print(p)  
   
 # Now successively add these in and see their effect
 # Run print(p) after each one
 p = p + theme_bw()
-p = p + scale_x_continuous(breaks = seq(1880, 2020, by = 10))
+p = p + scale_x_continuous(breaks = seq(1880, 2025, by = 10))
 p = p + ylab('Temperature\nanomaly in C')
 p = p + ggtitle('NASA global surface temperature data (mean +/- 2 standard deviations)')
 p = p + theme(axis.title.y = element_text(angle = 0, vjust = 1, hjust = 0))
